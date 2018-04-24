@@ -54,8 +54,8 @@ jenkinsJobMultibranchPipeline = { String JERVIS_BRANCH ->
                                     excludes ''
                                 }
                             }
-                            */
-                        }
+                            
+                        } */
                     }
                 }
                 /* prevented webhooks from building
