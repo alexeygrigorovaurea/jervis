@@ -38,8 +38,10 @@ jenkinsJobMultibranchPipeline = { String JERVIS_BRANCH ->
                         repository project_name
                         //behaviors not supported by job dsl
                         println 'hello'
+                       println this
                         //additional behaviors
-                        traits {
+                      /*   traits {
+                      println this
                             if(default_generator && default_generator.filter_type == 'only' && default_generator.hasRegexFilter()) {
                                 headRegexFilterWithPR {
                                     println default_generator.getFullBranchRegexString(JERVIS_BRANCH.split(' ') as List)
@@ -52,6 +54,7 @@ jenkinsJobMultibranchPipeline = { String JERVIS_BRANCH ->
                                     excludes ''
                                 }
                             }
+                            */
                         }
                     }
                 }
