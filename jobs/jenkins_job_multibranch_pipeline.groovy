@@ -37,11 +37,12 @@ jenkinsJobMultibranchPipeline = { String JERVIS_BRANCH ->
                         repoOwner project_folder
                         repository project_name
                         //behaviors not supported by job dsl
-
+                        println 'hello'
                         //additional behaviors
                         traits {
                             if(default_generator && default_generator.filter_type == 'only' && default_generator.hasRegexFilter()) {
                                 headRegexFilterWithPR {
+                                    println default_generator.getFullBranchRegexString(JERVIS_BRANCH.split(' ') as List)
                                     regex default_generator.getFullBranchRegexString(JERVIS_BRANCH.split(' ') as List)
                                 }
                             }
